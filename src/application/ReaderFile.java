@@ -9,12 +9,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReaderFile extends Task<String> {
+public class ReaderFile {
 
     private final String PATH = "./src/data/";
     private static ReaderFile instance;
     private String contain;
-    private String fileName;
 
     public static synchronized ReaderFile getInstance(){
         if(instance == null)
@@ -32,11 +31,8 @@ public class ReaderFile extends Task<String> {
         return listName;
     }
 
-    public void setFileName(String fileName){
-        this.fileName = fileName;
-    }
+    public void reader(String fileName){
 
-    public void reader(){
         try (FileReader reader = new FileReader(PATH+fileName);
              BufferedReader br = new BufferedReader(reader)) {
 
@@ -52,15 +48,12 @@ public class ReaderFile extends Task<String> {
 
     }
 
+    public void clear(){
+        contain = "";
+    }
+
     public String getContain(){
         return contain;
     }
 
-    @Override
-    protected String call() throws Exception {
-        updateMessage("    Processing... ");
-        reader();
-        updateMessage("    Done.  ");
-        return contain;
-    }
 }

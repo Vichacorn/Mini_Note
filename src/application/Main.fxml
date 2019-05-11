@@ -108,7 +108,7 @@
                       <RowConstraints maxHeight="519.0" minHeight="10.0" prefHeight="516.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <ListView fx:id="view" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                        <ListView fx:id="view" onMousePressed="#handelSelectTopic" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="216.0" text="View" textOverrun="CENTER_ELLIPSIS">
                            <font>
                               <Font name="Khmer OS" size="20.0" />
