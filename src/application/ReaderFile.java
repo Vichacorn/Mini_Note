@@ -44,7 +44,7 @@ public class ReaderFile {
 
     public void readerFile(String fileName){
 
-        try (FileReader reader = new FileReader(PATH+fileName);
+        try (FileReader reader = new FileReader(PATH+fileName+".txt");
              BufferedReader br = new BufferedReader(reader)) {
 
             // read line by line

@@ -23,6 +23,9 @@ public class Controller {
     Button save;
 
     @FXML
+    Button delete;
+
+    @FXML
     ListView<String> view;
 
     @FXML
@@ -54,10 +57,22 @@ public class Controller {
         status.setText("save file");
     }
 
+    public void handelDelete(ActionEvent e){
+        DeleteFile d = new DeleteFile();
+        d.deleteSelectFile(topicText.getText());
+
+        view.getItems().clear();
+        view.getItems().addAll(reader.getFileName());
+
+        status.setText("delete file");
+
+
+    }
+
     public void handelSelectFile(MouseEvent e){
         status.setText("select file");
         String topic = view.getSelectionModel().getSelectedItem();
-        reader.readerFile(topic+".txt");
+        reader.readerFile(topic);
         topicText.setText(topic);
         areaText.setText(reader.getContain());
         reader.clear();

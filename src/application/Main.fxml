@@ -42,15 +42,17 @@
                         <TextArea fx:id="areaText" onKeyTyped="#handelType" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
                         <GridPane prefHeight="62.0" prefWidth="474.0">
                           <columnConstraints>
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="582.0" minWidth="10.0" prefWidth="572.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="73.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="582.0" minWidth="10.0" prefWidth="528.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="74.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="74.0" />
                           </columnConstraints>
                           <rowConstraints>
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
                               <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#handelSave" prefHeight="26.0" prefWidth="74.0" text="Save" textAlignment="CENTER" GridPane.columnIndex="1" />
-                              <TextField fx:id="topicText" onKeyTyped="#handelType" promptText="topic" />
+                              <TextField fx:id="topicText" onKeyTyped="#handelType" prefWidth="537.0" promptText="topic" />
+                              <Button fx:id="delete" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#handelDelete" prefHeight="26.0" prefWidth="74.0" text="Delete" textAlignment="CENTER" GridPane.columnIndex="2" />
                            </children>
                         </GridPane>
                      </children>
